@@ -267,9 +267,9 @@ public abstract class ExtendableListView extends AbsListView {
         mDataChanged = true;
         mItemCount = mAdapter != null ? mAdapter.getCount() : 0;
 
-        if (mAdapter != null) {
-            mAdapter.registerDataSetObserver(mObserver);
-            mRecycleBin.setViewTypeCount(mAdapter.getViewTypeCount());
+        if (adapter != null) {
+            adapter.registerDataSetObserver(mObserver);
+            mRecycleBin.setViewTypeCount(adapter.getViewTypeCount());
         }
 
         requestLayout();
